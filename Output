@@ -1,0 +1,398 @@
+/** 
+ * Output
+ * Tyler Brennan
+ **/
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 1
+Price: 1
+Model: 1
+Brand: 
+1) Gibson
+2) Fender
+3) Ibanez
+4) Paul Reed Smith
+5) Epiphone
+6) Jackson
+7) ESP
+8) Yamaha
+9) Rickenbacker
+10) Gretsch
+Select a brand by using its index: 1
+Type: 
+1) acoustic
+2) electric
+Select a type by using its index: 1
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 1
+Bottom Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a bottom wood type by using its index: 1
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 1
+Price: ^Ctylers-mbp-5:Homework1 tylerbrennan$ javac *.java
+tylers-mbp-5:Homework1 tylerbrennan$ java GuitarTester
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 1
+Price: 1
+Model: 1
+Brand: 
+1) Gibson
+2) Fender
+3) Ibanez
+4) Paul Reed Smith
+5) Epiphone
+6) Jackson
+7) ESP
+8) Yamaha
+9) Rickenbacker
+10) Gretsch
+Select a brand by using its index: 1
+Type: 
+1) acoustic
+2) electric
+Select a type by using its index: 1
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 1
+Bottom Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a bottom wood type by using its index: 1
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 1
+Sorry that serial numnber was already used, please enter another: 2
+Price: 1
+Model: 1
+Brand: 
+1) Gibson
+2) Fender
+3) Ibanez
+4) Paul Reed Smith
+5) Epiphone
+6) Jackson
+7) ESP
+8) Yamaha
+9) Rickenbacker
+10) Gretsch
+Select a brand by using its index: 1
+Type: 
+1) acoustic
+2) electric
+Select a type by using its index: 1
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 1
+Bottom Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a bottom wood type by using its index: 1
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 3
+Please enter the serial number of the item you want to remove: 2
+Item has been removed:
+Serial Number: 2
+Price: $1.0
+Model: 1
+Brand: Gibson
+Type: acoustic
+Top Wood: rosewood
+Bottom Wood: rosewood
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 3
+Please enter the serial number of the item you want to remove: 2
+This item does not exist
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 4
+Enter the serial number of the item you wish to modify: 1
+1) Serial number
+2) Price
+3) Model
+4) Brand
+5) Type
+6) Top Wood
+7) Bottom Wood
+8) Quit
+Which aspect of this item would you like to modify: 2
+Price: 100
+1) Serial number
+2) Price
+3) Model
+4) Brand
+5) Type
+6) Top Wood
+7) Bottom Wood
+8) Quit
+Which aspect of this item would you like to modify: 8
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 5
+List of guitars:
+Serial Number: 1
+Price: $100.0
+Model: 1
+Brand: Gibson
+Type: acoustic
+Top Wood: rosewood
+Bottom Wood: rosewood
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 2
+Price: 1
+Model: 1
+Brand: 
+1) Gibson
+2) Fender
+3) Ibanez
+4) Paul Reed Smith
+5) Epiphone
+6) Jackson
+7) ESP
+8) Yamaha
+9) Rickenbacker
+10) Gretsch
+Select a brand by using its index: 1
+Type: 
+1) acoustic
+2) electric
+Select a type by using its index: 1
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 1
+Bottom Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a bottom wood type by using its index: 1
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 3
+Price: 2
+Model: 2
+Brand: 
+1) Gibson
+2) Fender
+3) Ibanez
+4) Paul Reed Smith
+5) Epiphone
+6) Jackson
+7) ESP
+8) Yamaha
+9) Rickenbacker
+10) Gretsch
+Select a brand by using its index: 2
+Type: 
+1) acoustic
+2) electric
+Select a type by using its index: 2
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 2
+Bottom Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a bottom wood type by using its index: 2
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 2
+Please enter the specific information for the item you want to add:
+Serial number: 4
+Price: 1
+Model: 2
+Brand: 
+1) Gibson
+2) Fender
+3) Ibanez
+4) Paul Reed Smith
+5) Epiphone
+6) Jackson
+7) ESP
+8) Yamaha
+9) Rickenbacker
+10) Gretsch
+Select a brand by using its index: 1
+Type: 
+1) acoustic
+2) electric
+Select a type by using its index: 1
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 1
+Bottom Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a bottom wood type by using its index: 1
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 1
+1) Serial number
+2) Price
+3) Model
+4) Brand
+5) Type
+6) Top Wood
+7) Bottom Wood
+Which attribute would you like to search by: 2
+Price: 1
+These guitars match your search:
+Serial Number: 2
+Price: $1.0
+Model: 1
+Brand: Gibson
+Type: acoustic
+Top Wood: rosewood
+Bottom Wood: rosewood
+
+Serial Number: 4
+Price: $1.0
+Model: 2
+Brand: Gibson
+Type: acoustic
+Top Wood: rosewood
+Bottom Wood: rosewood
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 1
+1) Serial number
+2) Price
+3) Model
+4) Brand
+5) Type
+6) Top Wood
+7) Bottom Wood
+Which attribute would you like to search by: 6
+Top Wood:
+1) rosewood
+2) alder
+3) mahogany
+4) cedar
+Select a top wood type by using its index: 2
+HIT
+These guitars match your search:
+Serial Number: 3
+Price: $2.0
+Model: 2
+Brand: Fender
+Type: electric
+Top Wood: alder
+Bottom Wood: alder
+
+1) Search
+2) Add an item
+3) Remove an item
+4) Modify an entry
+5) Display inventory
+6) Quit
+Please select what you want to do: 6
