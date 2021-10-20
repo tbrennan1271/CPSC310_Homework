@@ -1,11 +1,11 @@
 /**
- * guitar.java
+ * Guitar.java
  * Tyler Brennan
  * Creates a guitar class that covers all attributes associated with a guitar
 **/
 
 import java.lang.Math;
-public class guitar{
+public class Guitar{
     private final static String[] WOOD = {"rosewood", "alder", "mahogany", "cedar"};
     private final static String[] TYPE = {"acoustic", "electric"};
     private final static String[] BRAND = {"Gibson", "Fender", "Ibanez", "Paul Reed Smith", "Epiphone", "Jackson", "ESP", "Yamaha", "Rickenbacker", "Gretsch"};
@@ -17,8 +17,14 @@ public class guitar{
     private String topWood;
     private String bottomWood;
 
+    private GuitarSpecifications guitarSpecs;
+
+    public Guitar(){
+        
+    }
+
     /* 
-     * guitar()
+     * DELETE --------------------------------------------------------------------------
      * @param price         Price of the guitar
      * @param serialNum     Serial number of the guitar
      * @param model         Model of the guitar
@@ -27,7 +33,7 @@ public class guitar{
      * @param topWood       Type of top wood
      * @param bottomWood    Type of bottom wood
      */
-    public guitar(double price, int serialNum, String model, String brand, String type, String topWood, String bottomWood){
+    public Guitar(double price, int serialNum, String model, String brand, String type, String topWood, String bottomWood){
         price = Math.round(price * 100);
         this.price = price/100;
         this.serialNum = serialNum;
@@ -38,48 +44,66 @@ public class guitar{
         this.bottomWood = bottomWood;
     }
 
-    // GETTERS
+    /* 
+     * @param price         Price of the guitar
+     * @param serialNum     Serial number of the guitar
+     * @param model         Model of the guitar
+     * @param guitarSpecs   Specifications of the guitar
+     */
+    public Guitar(double price, int serialNum, GuitarSpecifications guitarSpecs){
+        price = Math.round(price * 100);
+        this.price = price/100;
+        this.serialNum = serialNum;
+        this.guitarSpecs = guitarSpecs;
+    }
+
     /* 
      * getPrice()
-     * @return String   Price of the guitar
+     * @return double   Price of the guitar
      */
-    public double getPrice(){ return price; }
+    public double getPrice(){ 
+        return price; 
+    }
 
     /* 
      * getSerial()
-     * @return String   Serial number associated with the guitar
+     * @return int  Serial number associated with the guitar
      */
-    public int getSerial(){ return serialNum; }
+    public int getSerial(){ 
+        return serialNum; 
+    }
 
     /* 
-     * getModel()
-     * @return String   Model of the guitar
+     * getGuitarSpecifications()
+     * @return GuitarSpecifications     Specifications for the specific guitar
      */
-    public String getModel(){ return model; }
+    public GuitarSpecifications getGuitarSpecifications(){ 
+        return guitarSpecs; 
+    }
 
     /* 
-     * getBrand()
-     * @return String   Brand of the guitar
+     * setPrice()
+     * @param price Price of the guitar
      */
-    public String getBrand(){ return brand; }
+    public void setPrice(double price){ 
+        this.price = price; 
+    }
 
     /* 
-     * getType()
-     * @return String   Type of the guitar
+     * setSerial()
+     * @return serial   Serial number associated with the guitar
      */
-    public String getType(){ return type; }
+    public void setSerial(int serialNum){ 
+        this.serialNum = serialNum; 
+    }
 
     /* 
-     * getTopWood()
-     * @return String   Top wood used on the guitar
+     * setGuitarSpecifications()
+     * @return guitarSpecs     Specifications for the specific guitar
      */
-    public String getTopWood(){ return topWood; }
-
-    /* 
-     * getBottomWood()
-     * @return String   Bottom wood used on the guitar
-     */
-    public String getBottomWood(){ return bottomWood; }
+    public void setGuitarSpecifications(GuitarSpecifications guitarSpecs){ 
+        this.guitarSpecs = guitarSpecs; 
+    }
 
     /*
      * printWood()
@@ -188,6 +212,6 @@ public class guitar{
      * @return String   All the information associated with a single guitar
      */
     public String toString(){
-        return "Serial Number: " + serialNum + "\nPrice: $" + price +  "\nModel: " + model + "\nBrand: " + brand + "\nType: " + type + "\nTop Wood: " + topWood + "\nBottom Wood: " + bottomWood;
+        return "Serial Number: " + serialNum + "\nPrice: $" + price + "\n" + guitarSpecs;
     }
 }

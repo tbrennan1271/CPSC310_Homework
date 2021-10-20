@@ -1,20 +1,20 @@
 /**
- * userInput.java
+ * UserInput.java
  * Tyler Brennan
  * Used to facilitate the main block of code in pulling in user input by making repetitive code into methods
  **/
 
 import java.util.Scanner;
- public class userInput{
-    Scanner sc;
-    inventorySystem inventory;
+ public class UserInput{
+    private Scanner sc;
+    private InventorySystem inventory;
 
 
     /*
      * userInput()
      * @param sc       Scanner object
      */
-    public userInput(Scanner sc, inventorySystem inventory){
+    public UserInput(Scanner sc, InventorySystem inventory){
         this.sc = sc;
         this.inventory = inventory;
     }
@@ -34,7 +34,7 @@ import java.util.Scanner;
                     continue;
                 }
                 return serial;
-            } catch(Exception e){
+            } catch(IllegalArgumentException e){
                 System.out.print("Sorry that serial number is invalid, please enter another: ");
                 sc.nextLine();
             }
@@ -73,110 +73,247 @@ import java.util.Scanner;
         sc.nextLine();
         System.out.print("Model: ");
         model = sc.nextLine();
-        return model;
+        return model.toLowerCase();
     }
 
     /*
      * userBrand()
-     * @return String       the user inputted brand
+     * @return Brand    the user inputted brand
      */
-    public String userBrand(){
-        String brand;
-        int index;
+    public Brand userBrand(){
+        Brand brand;
         System.out.println("Brand: ");
-        System.out.println(guitar.printBrand());
+        System.out.println("1) Gibson");
+        System.out.println("2) Fender");
+        System.out.println("3) Ibanez");
+        System.out.println("4) Paul Reed Smith");
+        System.out.println("5) Epiphone");
+        System.out.println("6) Jackson");
+        System.out.println("7) ESP");
+        System.out.println("8) Yamaha");
+        System.out.println("9) Rickenbacker");
+        System.out.println("10) Gretsch");
         System.out.print("Select a brand by using its index: ");
         do{
             try{
-                index = sc.nextInt();
-                brand = guitar.brandSelection(index);
-                if(index < 1 || index > guitar.brandLen()){
+                brand = brandSelect();
+                if(brand != null){
+                    return brand;
+                } else{
                     System.out.print("Please enter a valid index: ");
-                    continue;
                 }
-                return brand;
             } catch(Exception e){
                 System.out.print("Please enter a valid index: ");
                 sc.nextLine();
             }
         } while(true);
+    }
+    /*
+     * userBrandSort()
+     * @return Brand    the user inputted brand
+     */
+    public Brand userBrandSort(){
+        System.out.println("Brand: ");
+        System.out.println("1) Gibson");
+        System.out.println("2) Fender");
+        System.out.println("3) Ibanez");
+        System.out.println("4) Paul Reed Smith");
+        System.out.println("5) Epiphone");
+        System.out.println("6) Jackson");
+        System.out.println("7) ESP");
+        System.out.println("8) Yamaha");
+        System.out.println("9) Rickenbacker");
+        System.out.println("10) Gretsch");
+        System.out.print("Select a brand by using its index: ");
+        try{
+            return brandSelect();
+        } catch(Exception e){
+            sc.nextLine();
+            return null;
+        }
+    }
+
+    private Brand brandSelect(){
+        int index = sc.nextInt();
+        if(index == 1){
+            return Brand.GIBSON;
+        } else if(index == 2){
+            return Brand.FENDER;
+        } else if (index == 3){
+            return Brand.IBANEZ;
+        } else if (index == 4){
+            return Brand.PAUL_REED_SMITH;
+        } else if (index == 5){
+            return Brand.EPIPHONE;
+        } else if (index == 6){
+            return Brand.JACKSON;
+        } else if (index == 7){
+            return Brand.ESP;
+        } else if (index == 8){
+            return Brand.YAMAHA;
+        } else if (index == 9){
+            return Brand.RICKENBACKER;
+        } else if (index == 10){
+            return Brand.GRETSCH;
+        } else{
+            return null;
+        }
     }
 
     /*
      * userType()
-     * @return String       the user inputted type
+     * @return Type     the user inputted type
      */
-    public String userType(){
-        String type;
-        int index;
+    public Type userType(){
+        Type type;
         System.out.println("Type: ");
-        System.out.println(guitar.printType());
+        System.out.println("1) Acoustic");
+        System.out.println("2) Electric");
         System.out.print("Select a type by using its index: ");
         do{
             try{
-                index = sc.nextInt();
-                type = guitar.typeSelection(index);
-                if(index < 1 || index > guitar.typeLen()){
+                type = typeSelect();
+                if(type != null){
+                    return type;
+                } else{
                     System.out.print("Please enter a valid index: ");
-                    continue;
                 }
-                return type;
             } catch(Exception e){
                 System.out.print("Please enter a valid index: ");
                 sc.nextLine();
             }
         } while(true);
+    }
+    /*
+     * userTypeSort()
+     * @return Type     the user inputted type
+     */
+    public Type userTypeSort(){
+        System.out.println("Type: ");
+        System.out.println("1) Acoustic");
+        System.out.println("2) Electric");
+        System.out.print("Select a type by using its index: ");
+        try{
+            return typeSelect();
+        } catch(Exception e){
+            sc.nextLine();
+            return null;
+        }
+    }
+
+    private Type typeSelect(){
+        int index = sc.nextInt();
+        if(index == 1){
+            return Type.ACOUSTIC;
+        } else if(index == 2){
+            return Type.ELECTRIC;
+        } else{
+            return null;
+        }
     }
 
     /*
      * userTopWood()
-     * @return String       the user inputted wood type
+     * @return Wood     the user inputted wood type
      */
-    public String userTopWood(){
-        String topWood;
-        int index;
+    public Wood userTopWood(){
+        Wood topWood;
         System.out.println("Top Wood:");
-        System.out.println(guitar.printWood());
+        System.out.println("1) Rosewood");
+        System.out.println("2) Alder");
+        System.out.println("3) Mahogany");
+        System.out.println("4) Cedar");
         System.out.print("Select a top wood type by using its index: ");
         do{
             try{
-                index = sc.nextInt();
-                topWood = guitar.woodSelection(index);
-                if(index < 1 || index > guitar.woodLen()){
+                topWood = woodSelect();
+                if(topWood != null){
+                    return topWood;
+                } else{
                     System.out.print("Please enter a valid index: ");
-                    continue;
                 }
-                return topWood;
             } catch(Exception e){
                 System.out.print("Please enter a valid index: ");
                 sc.nextLine();
             }
         } while(true);
     }
+    /*
+     * userTopWoodSort()
+     * @return Wood     the user inputted wood type
+     */
+    public Wood userTopWoodSort(){
+        System.out.println("Top Wood:");
+        System.out.println("1) Rosewood");
+        System.out.println("2) Alder");
+        System.out.println("3) Mahogany");
+        System.out.println("4) Cedar");
+        System.out.print("Select a top wood type by using its index: ");
+        try{
+            return woodSelect();
+        } catch(Exception e){
+            sc.nextLine();
+            return null;
+        }
+    }
 
     /*
      * userBottomWood()
-     * @return String       the user inputted wood type
+     * @return Wood     the user inputted wood type
      */
-    public String userBottomWood(){
-        String bottomWood;
-        int index;
+    public Wood userBottomWood(){
+        Wood bottomWood;
         System.out.println("Bottom Wood:");
-        System.out.println(guitar.printWood());
+        System.out.println("1) Rosewood");
+        System.out.println("2) Alder");
+        System.out.println("3) Mahogany");
+        System.out.println("4) Cedar");
         System.out.print("Select a bottom wood type by using its index: ");
         do{
             try{
-                index = sc.nextInt();
-                bottomWood = guitar.woodSelection(index);
-                if(index < 1 || index > guitar.woodLen()){
+                bottomWood = woodSelect();
+                if(bottomWood != null){
+                    return bottomWood;
+                } else{
                     System.out.print("Please enter a valid index: ");
-                    continue;
                 }
-                return bottomWood;
             } catch(Exception e){
                 System.out.print("Please enter a valid index: ");
                 sc.nextLine();
             }
         } while(true);
+    }
+    /*
+     * userBottomWoodSort()
+     * @return Wood     the user inputted wood type
+     */
+    public Wood userBottomWoodSort(){
+        System.out.println("Bottom Wood:");
+        System.out.println("1) Rosewood");
+        System.out.println("2) Alder");
+        System.out.println("3) Mahogany");
+        System.out.println("4) Cedar");
+        System.out.print("Select a top wood type by using its index: ");
+        try{
+            return woodSelect();
+        } catch(Exception e){
+            sc.nextLine();
+            return null;
+        }
+    }
+
+    private Wood woodSelect(){
+        int index = sc.nextInt();
+        if(index == 1){
+            return Wood.ROSEWOOD;
+        } else if(index == 2){
+            return Wood.ALDER;
+        } else if (index == 3){
+            return Wood.MAHOGANY;
+        } else if (index == 4){
+            return Wood.CEDAR;
+        } else{
+            return null;
+        }
     }
  }
